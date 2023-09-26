@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.get("/")
 def hello_world():
     return """
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=Y5Xt4PDEXX3vwyDY&autoplay=1&&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allow="autoplay" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=Y5Xt4PDEXX3vwyDY&autoplay=1&&cc_load_policy=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allow="autoplay" allowfullscreen></iframe>
     """
 
 
