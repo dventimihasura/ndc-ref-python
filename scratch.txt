@@ -1,0 +1,24 @@
+# -*- mode: restclient; -*-
+
+:PORT = 8080
+
+#
+GET http://localhost::PORT/
+
+#
+GET http://localhost::PORT/capabilities
+
+#
+GET http://localhost::PORT/healthz
+
+#
+GET http://localhost::PORT/metrics
+
+#
+GET http://localhost::PORT/schema
+
+#
+POST http://localhost::PORT/query
+
+#
+POST http://localhost::PORT/explain
