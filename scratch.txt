@@ -22,3 +22,9 @@ POST http://localhost::PORT/query
 
 #
 POST http://localhost::PORT/explain
+
+#
+GET https://connector-9c0d03fc-3dcb-4e4c-a976-422f24a970a2-hyc5v23h6a-ue.a.run.app
+
+#
+GET https://connector-9c0d03fc-3dcb-4e4c-a976-422f24a970a2-hyc5v23h6a-ue.a.run.app:80/capabilities
