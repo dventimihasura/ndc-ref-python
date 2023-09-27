@@ -2,29 +2,66 @@
 
 :PORT = 8080
 
-#
-GET http://localhost::PORT/
-
-#
+# Get capabilities
 GET http://localhost::PORT/capabilities
 
-#
+# Get healthz
 GET http://localhost::PORT/healthz
 
-#
+# Get metrics
 GET http://localhost::PORT/metrics
 
-#
+# Get schema
 GET http://localhost::PORT/schema
 
-#
+# Get all articles
 POST http://localhost::PORT/query
+Content-Type: application/json
 
-#
-POST http://localhost::PORT/explain
+{
+  "collection": "articles",
+  "query": {
+    "fields": {
+      "id": {
+	"column": "id",
+	"type": "column"
+      },
+      "author_id": {
+	"column": "author_id",
+	"type": "column"
+      },
+      "title": {
+	"column": "title",
+	"type": "column"
+      }
+    }
+  },
+  "arguments": {},
+  "collection_relationships": {}
+}
 
-#
-GET https://connector-9c0d03fc-3dcb-4e4c-a976-422f24a970a2-hyc5v23h6a-ue.a.run.app
+# Get all authors
+POST http://localhost::PORT/query
+Content-Type: application/json
 
-#
-GET https://connector-9c0d03fc-3dcb-4e4c-a976-422f24a970a2-hyc5v23h6a-ue.a.run.app:80/capabilities
+{
+  "collection": "authors",
+  "query": {
+    "fields": {
+      "id": {
+	"column": "id",
+	"type": "column"
+      },
+      "first_name": {
+	"column": "first_name",
+	"type": "column"
+      },
+      "last_name": {
+	"column": "last_name",
+	"type": "column"
+      }
+    }
+  },
+  "arguments": {},
+  "collection_relationships": {}
+}
