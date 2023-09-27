@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import request
-import jsonlines
 import jq
+import jsonlines
 
 app = Flask(__name__)
 
